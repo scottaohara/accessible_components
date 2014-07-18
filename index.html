@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Accessible Modal Window</title>
+    <link rel="stylesheet" href="css.css" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized"  content="320" />
+    <meta name="viewport"         content="width=device-width, minimum-scale=1, initial-scale=1" />
+    <style>
+      *{-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; font-family: arial;}
+      /* page styling css */
+body, html {
+  background: #efefef;
+  margin: 0;
+  padding: 0;
+  -moz-text-size-adjust:100%;
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
+  text-rendering:optimizeLegibility;
+}
+
+#page {
+  margin: auto;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.menu {
+  background: #fff;
+  border-bottom: 1px solid #bbb;
+  margin: 0;
+  padding: 12px 8px 0;
+  text-align: center;
+}
+
+input[type="submit"],
+input[type="button"] {
+  -webkit-appearance:none;
+}
+
+button::-moz-focus-inner,
+ input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+:focus, .btn:focus {
+  box-shadow: 0 0 10px rgba(129,219,219,.75);
+}
+
+.btn {
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 0 0 #000;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  position: relative;
+  text-align: center;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 0 4px rgba(0,0,0,.5);
+  border-color: transparent;
+  transform: scale(1.1);
+  z-index: 3;
+}
+
+label {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: .75em;
+}
+
+.input {
+  display: block;
+  font-size: 1.5em;
+  margin-bottom: .75em;
+  min-width: 230px;
+  padding: 8px;
+  width: 100%;
+}
+    </style>
+  </head>
+
+  <body>
+
+      <div class="menu">
+        <button class="btn js-btn js-m-template" type="button"
+                aria-controls="modal-dialog"
+                data-for="r-1">
+                Text Content
+        </button>
+        <button class="btn js-btn js-m-template" type="button"
+                aria-controls="modal-dialog"
+                data-for="r-2"
+                data-max-width="500px">
+                Form Content
+        </button>
+        <button class="btn js-btn js-m-template" type="button"
+                aria-controls="modal-dialog"
+                data-for="r-3"
+                data-max-width="350px"
+                data-max-height="400px">
+                Text Content 2
+        </button>
+        <button class="btn js-btn js-m-template" type="button"
+                aria-controls="modal-dialog"
+                data-for="r-4">
+                Embeded Video
+        </button>
+        <button class="btn js-btn js-m-ajax" type="button"
+                aria-controls="modal-dialog"
+                data-modal-title="Content Via ajax"
+                data-from="test.html">
+                ajax Content
+        </button>
+        <button class="btn js-btn js-m-iframe" type="button"
+                aria-controls="modal-dialog"
+                data-modal-title="iFramed Video 1"
+                data-src="https://www.youtube.com/embed/RsSBcx_1l-Q?rel=0&amp;vq=large">
+                YouTube Video 1
+        </button>
+        <button class="btn js-btn js-m-iframe" type="button"
+                aria-controls="modal-dialog"
+                data-modal-title="iFramed Video 2"
+                data-src="https://www.youtube.com/embed/tKXdQpwX9-c?vq=large&amp;rel=0">
+                YouTube Video 2
+        </button>
+      </div>
+
+
+  <div id="page">
+
+      <article>
+        <h2>
+          Demo:<br />
+          Accessible Modal Window with JavaScript &amp; CSS
+        </h2>
+        <p>
+
+        </p>
+      </article>
+
+      <hr />
+      <form>
+        <p>
+          This input is here as a test to make sure you
+          can't tab out of the modal window while it's open.
+        </p>
+        <label for="derp">Test Input</label>
+        <input type="text" class="input" id="derp" placeholder="This is just a test" />
+      </form>
+
+  </div> <!-- end .page -->
+
+
+    <!--
+
+      here we put the modal overlay/content
+
+    -->
+
+    <div class="modal-overlay" id="modal-dialog"
+         aria-hidden="true" role="dialog"
+         aria-labelledby="modal-title" aria-describedby="modal-desc">
+
+      <div class="modal-content" id="modal-holder" role="document">
+
+        <p id="modal-desc" class="invis">
+          Use the tab and shift + tab to traverse through focusable elements in
+          the modal window. Use the Escape key to close the modal window at anytime.
+          The content of this modal is dynamic.
+        </p>
+
+        <button class="modal-close" id="modal-close" type="button">
+          <span aria-hidden="true">&times;</span>
+          <span class="invis">Close Modal</span>
+        </button>
+
+        <div class="modal-inner-content" id="modal-content">
+          <h1 id="modal-title">Whoops</h1>
+          <p>
+            Looks like content failed to load.
+            Sorry about that.
+          </p>
+        </div>
+
+      </div> <!-- end .modal-content -->
+
+    </div> <!-- end .modal-overlay -->
+
+    <script type="text/template" id="mv">
+      <div class="modal-aspect" id="modal-video">
+        <iframe src="#!" tabindex="0" id="modal-player"
+                webkitallowfullscreen="webkitallowfullscreen"
+                allowfullscreen="allowfullscreen"
+                class="modal-player"></iframe>
+      </div>
+    </script>
+
+    <script type="text/template" id="r-1">
+      <h1 id="modal-title">Content Title</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
+    </script>
+
+    <script type="text/template" id="r-2">
+      <h1 id="modal-title">Form Content Title</h1>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" class="input" placeholder="Gimmie ur Name" />
+        <label for="email">Email:</label>
+        <input type="email" id="email" class="input" placeholder="Gimmie ur Email" />
+        <input type="submit" class='btn' value="Sign Up" />
+      </form>
+    </script>
+
+    <script type="text/template" id="r-3">
+      <h1 id="modal-title">More Content Title</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
+    </script>
+
+    <script type="text/template" id="r-4">
+      <h1 id="modal-title">Video Content Title</h1>
+      <video volume="0" muted="muted" loop="loop" controls="true" preload="auto" style="width: 100%">
+        <source type="video/mp4" src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" />
+        <source type="video/webm" src="http://video.webmfiles.org/big-buck-bunny_trailer.webm" />
+        Video not supported
+      </video>
+    </script>
+
+    <script src="js.js"></script>
+
+  </body>
+</html>
