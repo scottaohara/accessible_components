@@ -20,7 +20,7 @@ body, html {
   text-rendering:optimizeLegibility;
 }
 
-#page {
+.content-area {
   margin: auto;
   max-width: 900px;
   padding: 20px;
@@ -45,8 +45,12 @@ button::-moz-focus-inner,
   padding: 0;
 }
 
-:focus, .btn:focus {
+a:focus, button:focus, .btn:focus {
   box-shadow: 0 0 10px rgba(129,219,219,.75);
+}
+
+input[type="text"]:focus, textarea:focus, .modal-content:focus {
+  outline: 1px solid rgb(129,219,219);
 }
 
 .btn {
@@ -89,6 +93,37 @@ label {
 
   <body>
 
+
+<div class="modal-overlay" id="modal-dialog"
+         aria-hidden="true" role="dialog"
+         aria-labelledby="modal-title" aria-describedby="modal-desc">
+
+      <div class="modal-content" id="modal-holder" role="document">
+
+        <p id="modal-desc" class="invis">
+          Use the tab and shift + tab to traverse through focusable elements in
+          the modal window. Use the Escape key to close the modal window at anytime.
+          The content of this modal is dynamic.
+        </p>
+
+        <div class="modal-inner-content" id="modal-content">
+          <h1 id="modal-title">Whoops</h1>
+          <p>
+            Looks like content failed to load.
+            Sorry about that.
+          </p>
+        </div>
+
+        <button class="modal-close" id="modal-close" type="button">
+          <span aria-hidden="true">&times;</span>
+          <span class="invis">Close Modal</span>
+        </button>
+
+      </div> <!-- end .modal-content -->
+
+    </div> <!-- end .modal-overlay -->
+
+    <div id="page">
       <div class="menu">
         <button class="btn js-btn js-m-template" type="button"
                 aria-controls="modal-dialog"
@@ -104,7 +139,7 @@ label {
         <button class="btn js-btn js-m-template" type="button"
                 aria-controls="modal-dialog"
                 data-for="r-3"
-                data-max-width="350px"
+                data-max-width="370px"
                 data-max-height="400px">
                 Text Content 2
         </button>
@@ -134,7 +169,7 @@ label {
       </div>
 
 
-  <div id="page">
+  <div class="content-area">
 
       <article>
         <h2>
@@ -156,50 +191,21 @@ label {
         <input type="text" class="input" id="derp" placeholder="This is just a test" />
       </form>
 
-  </div> <!-- end .page -->
+  </div> <!-- end .content-area -->
+</div> <!-- end #page -->
 
+  <!--
 
-    <!--
+    here we put the modal overlay/content
 
-      here we put the modal overlay/content
+  -->
 
-    -->
-
-    <div class="modal-overlay" id="modal-dialog"
-         aria-hidden="true" role="dialog"
-         aria-labelledby="modal-title" aria-describedby="modal-desc">
-
-      <div class="modal-content" id="modal-holder" role="document">
-
-        <p id="modal-desc" class="invis">
-          Use the tab and shift + tab to traverse through focusable elements in
-          the modal window. Use the Escape key to close the modal window at anytime.
-          The content of this modal is dynamic.
-        </p>
-
-        <button class="modal-close" id="modal-close" type="button">
-          <span aria-hidden="true">&times;</span>
-          <span class="invis">Close Modal</span>
-        </button>
-
-        <div class="modal-inner-content" id="modal-content">
-          <h1 id="modal-title">Whoops</h1>
-          <p>
-            Looks like content failed to load.
-            Sorry about that.
-          </p>
-        </div>
-
-      </div> <!-- end .modal-content -->
-
-    </div> <!-- end .modal-overlay -->
-
-    <script type="text/template" id="mv">
+    <script type="text/template" id="m-iframe">
       <div class="modal-aspect" id="modal-video">
-        <iframe src="#!" tabindex="0" id="modal-player"
+        <iframe src="#!" tabindex="0" id="modal-iFrameElement"
                 webkitallowfullscreen="webkitallowfullscreen"
                 allowfullscreen="allowfullscreen"
-                class="modal-player"></iframe>
+                class="modal-iFrameElement"></iframe>
       </div>
     </script>
 

@@ -11,11 +11,11 @@
       close = getId('modal-close'),
       mContent = getId('modal-content'),
       mHolder = getId('modal-holder'),
+      page = getId('page'),
       modalOpen = false,
-      unRestrict = true,
       heading,
       newHeading,
-      player,
+      iFrameElement,
       frameSource,
       lastFocus,
       i;
@@ -36,6 +36,7 @@
   function modalShow () {
     lastFocus = document.activeElement; // keep track of what was last focused
     lastFocus.blur(); // now unfocus that last element
+    page.setAttribute('aria-hidden', 'true'); // hide the contents under the modal
     modal.setAttribute('aria-hidden', 'false'); // give assistive visibility
     modalOpen = true; // used for esc key functionality
     mHolder.focus();
@@ -46,8 +47,7 @@
 
   // set the source of the iFrame in a modal window
   function setIframe ( iframeSrc ) {
-    unRestrict = false;
-    player.src=iframeSrc;
+    iFrameElement.src=iframeSrc;
   }
 
 
@@ -55,11 +55,13 @@
   // but only if modalOpen is set to true
   function modalClose ( event ) {
     if (modalOpen && ( !event.keyCode || event.keyCode === 27 ) ) {
+      page.setAttribute('aria-hidden', 'false'); // unhide the main content
       modal.setAttribute('aria-hidden', 'true');
       mHolder.setAttribute('tabindex', '-1');
       modalOpen = false;
       document.body.removeAttribute('style');
       lastFocus.focus();
+      mContent.innerHTML = '';
       // refocus on the last element that was in focus before
       // local window opened
       if (mHolder.hasAttribute('style')) {
@@ -119,36 +121,36 @@
   // find out which one is currently focused
   // On tab / shift tab, focus on the next one / previous one
   function focusRestrict ( event ) {
-    if ( event.keyCode === 9 && modalOpen && unRestrict === true ) {
-      // queryselectorall returns our node list of elements that can be focusable
-      // but the node list it produces is not actually an array
-      var list = modal.querySelectorAll("button, input, a, video, audio, iframe, embed, object, [tabindex]"),
-          // grab the slice method from the Array prototype,
-          // .call is invoking the slice function to fire on 'list',
-          // even though list doesn't have that function by default
-          focusable = Array.prototype.slice.call( list ),
-          listLength = list.length,
-          focused = document.activeElement,
-          // tells us the position of the currently focused element in the
-          // list we have
-          focusIndex = focusable.indexOf( focused ),
-          nextIndex;
+    // Find the active element
+    // and set the status of inModal to false
+    var el = document.activeElement,
+        inModal = false;
 
-        // meet all the conditions!
-        if ( focusIndex < listLength - 1 && !event.shiftKey ) {
-          nextIndex = focusIndex + 1;
-        } else if ( focusIndex > 0 && event.shiftKey ) {
-          nextIndex = focusIndex -1;
-        } else if ( focusIndex === listLength -1 && !event.shiftKey ) {
-          nextIndex = 0;
-        } else {
-          nextIndex = listLength -1;
-        }
-
-        focusable[nextIndex].focus();
-        event.preventDefault();
+    if ( event.keyCode === 9 && el == close ) {
+      mHolder.focus();
     }
+
+    // only if a modal is open do we want to fire this
+    if (modalOpen && el.tagName !== 'BODY' && el.tagName !== 'HTML') {
+      while (el = el.parentNode) {
+        if (/modal-overlay/.test(el.className)) {
+          inModal = true;
+          break;
+        }
+      }
+
+      if (inModal == false) {
+
+        if (event.shiftKey) {
+          close.focus();
+        } else {
+          mHolder.focus();
+        }
+      }
+    }
+
   }
+
 
 
   // Add an event listener to all buttons that are set to load
@@ -196,7 +198,7 @@
   // on click of a 'regular content'
   // i.e. not video iframe
   // grab the value of the 'data-for' attribute and match it up
-  // with the corresponding <template> id value.
+  // with the corresponding <script type="text/template"> id value.
   // assign the innerHTML of the template to the innerHTML of mContent
   // to view the template's content within the modal box.
   for (i = 0; i < tModal.length; i++) {
@@ -219,16 +221,16 @@
   };
 
 
-  // "video" content modal
+  // "iframe / video" content modal
   // Grab the video source url from the data-src attribute, so we don't have to
   // create or delete a JS function if we decide to add or remove video buttons
   for (i = 0; i < iModal.length; i++) {
     iModal[i].addEventListener('click', function () {
-      // first get the innerHTMl of the <template> with the id="mv"
-      mContent.innerHTML = getId('mv').innerHTML;
+      // first get the innerHTML of the template with the id="m-iframe"
+      mContent.innerHTML = getId('m-iframe').innerHTML;
       // now that 'mv' is in the DOM, get the ID
-      // of the iframe and assign it to 'player'
-      player = getId('modal-player');
+      // of the iframe and assign it to 'iFrameElement'
+      iFrameElement = getId('modal-iFrameElement');
       // grab the video source that's in the data-src attribute of
       // the button that was clicked (this)
       frameSource = this.getAttribute('data-src');
@@ -244,10 +246,10 @@
   // close modal by btn
   close.addEventListener('click', modalClose);
 
-  // close modal by keypress, but only if modal is open
+  // close modal by keydown, but only if modal is open
   document.addEventListener('keydown', modalClose);
 
   // restrict tab focus on elements only inside modal window
-  window.addEventListener('keydown', focusRestrict);
+  window.addEventListener('keypress', focusRestrict);
 
 })();

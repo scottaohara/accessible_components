@@ -48,7 +48,7 @@
 
 
 /*
-  iFrame (video) Specific
+  iFrame Specific
 */
 .modal-aspect-container {
   max-height: 480px;
@@ -63,7 +63,7 @@
   width: 100%;
 }
 
-.modal-player {
+.modal-iFrameElement {
   background: #000;
   border: none;
   height: 100%;
@@ -110,7 +110,7 @@
 
 
 /*
-  Visually hide things
+  Hide things
 */
 .invis {
   color: transparent;
