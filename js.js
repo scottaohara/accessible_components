@@ -1,3 +1,10 @@
+/*
+  A Modal to get in everyone's way v1.0
+  Copyright 2014
+  Built by Scott O'Hara // @scottohara // scottohara.me
+  Licensed under MIT  // github.com/scottaohara/accessible-modal/blob/master/LICENSE.md
+*/
+
 (function() {
 
   'use strict';
