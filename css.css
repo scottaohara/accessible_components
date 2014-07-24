@@ -108,6 +108,17 @@
   z-index: 2;
 }
 
+.modal-close span {
+  display: block;
+  height: 34px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.modal-close:focus span {
+  outline: 1px dotted;
+}
+
 
 /*
   Hide things
