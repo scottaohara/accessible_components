@@ -144,20 +144,14 @@ label {
                 data-for="r-4">
                 Embeded Video
         </button>
+        <button class="btn js-btn js-m-template" type="button"
+                data-for="r-5">
+                YouTube Video
+        </button>
         <button class="btn js-btn js-m-ajax" type="button"
                 data-modal-title="Content Via ajax"
                 data-from="test.html">
                 ajax Content
-        </button>
-        <button class="btn js-btn js-m-iframe" type="button"
-                data-modal-title="iFramed Video 1"
-                data-src="https://www.youtube.com/embed/RsSBcx_1l-Q?rel=0&amp;vq=large">
-                YouTube Video 1
-        </button>
-        <button class="btn js-btn js-m-iframe" type="button"
-                data-modal-title="iFramed Video 2"
-                data-src="https://www.youtube.com/embed/tKXdQpwX9-c?vq=large&amp;rel=0">
-                YouTube Video 2
         </button>
       </div>
 
@@ -192,15 +186,6 @@ label {
     here we put the modal overlay/content
 
   -->
-
-    <script type="text/template" id="m-iframe">
-      <div class="modal-aspect" id="modal-video">
-        <iframe src="#!" tabindex="0" id="modal-iFrameElement"
-                webkitallowfullscreen="webkitallowfullscreen"
-                allowfullscreen="allowfullscreen"
-                class="modal-iFrameElement"></iframe>
-      </div>
-    </script>
 
     <script type="text/template" id="r-1">
       <h1 id="modal-title">Content Title</h1>
@@ -240,6 +225,16 @@ label {
         <source type="video/webm" src="http://video.webmfiles.org/big-buck-bunny_trailer.webm" />
         Video not supported
       </video>
+    </script>
+
+    <script type="text/template" id="r-5">
+      <h1 id="modal-title">YouTube Content Title</h1>
+      <div class="modal-aspect" id="modal-video">
+        <iframe src="https://www.youtube.com/embed/tKXdQpwX9-c?vq=large&amp;rel=0" tabindex="0"
+                webkitallowfullscreen="webkitallowfullscreen"
+                allowfullscreen="allowfullscreen"
+                class="modal-iFrameElement"></iframe>
+      </div>
     </script>
 
     <script src="js.js"></script>
