@@ -114,40 +114,20 @@
   }
 
 
-  // find all elements within a parent that we want to
-  // be focusable & store them in an array
-
-  // find out which one is currently focused
-  // On tab / shift tab, focus on the next one / previous one
+  // Restrict focus to the modal window when it's open.
+  // Tabbing will just loop through the whole modal.
+  // Shift + Tab will allow backup to the top of the modal,
+  // and then stop.
   function focusRestrict ( event ) {
-    // Find the active element
-    // and set the status of inModal to false
-    var el = document.activeElement,
-        inModal = false;
 
-    if ( event.keyCode === 9 && el == close ) {
-      mHolder.focus();
-    }
+    document.addEventListener('focus', function( event ) {
 
-    // only if a modal is open do we want to fire this
-    if (modalOpen && el.tagName !== 'BODY' && el.tagName !== 'HTML') {
-      while (el = el.parentNode) {
-        if (/modal-overlay/.test(el.className)) {
-          inModal = true;
-          break;
-        }
+      if ( modalOpen && !modal.contains( event.target ) ) {
+        event.stopPropagation();
+        modal.focus();
       }
 
-      if (inModal == false) {
-
-        if (event.shiftKey) {
-          close.focus();
-        } else {
-          mHolder.focus();
-        }
-      }
-    }
-
+    }, true);
   }
 
 
