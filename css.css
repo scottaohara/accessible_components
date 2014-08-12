@@ -48,38 +48,6 @@
 
 
 /*
-  iFrame Specific
-*/
-.modal-aspect-container {
-  max-height: 480px;
-  max-width: 854px;
-  margin: auto;
-}
-
-.modal-aspect {
-  height: 0;
-  padding-bottom: 56.25%;
-  position: relative;
-  width: 100%;
-}
-
-.modal-iFrameElement {
-  background: #000;
-  border: none;
-  height: 100%;
-  left: 0;
-  margin: auto;
-  max-height: 480px;
-  max-width: 853px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
-  z-index: 4;
-}
-
-
-/*
   General Modal Content
 */
 #modal-title {
@@ -88,11 +56,10 @@
 }
 
 
-
 /*
   Close Modal Button
 */
-.modal-close {
+.modal--close {
   background: none;
   color: #111;
   font-family: arial;
@@ -108,24 +75,7 @@
   z-index: 2;
 }
 
-.modal-close span {
-  display: block;
-  height: 34px;
-  overflow: hidden;
-  text-align: center;
-}
-
-.modal-close:focus span {
-  outline: 1px dotted;
-}
-
-
-/*
-  Hide things
-*/
-.invis {
-  color: transparent;
-  font-size: 1px;
-  position: absolute;
-  right: -99999px;
+.modal--close:hover,
+.modal--close:focus {
+  color: #840d00;
 }

@@ -1,0 +1,30 @@
+/*
+  iFrame Specific
+*/
+.modal-aspect-container {
+  max-height: 480px;
+  max-width: 854px;
+  margin: auto;
+}
+
+.modal-aspect {
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
+}
+
+.modal-iFrameElement {
+  background: #000;
+  border: none;
+  height: 100%;
+  left: 0;
+  margin: auto;
+  max-height: 480px;
+  max-width: 853px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+}

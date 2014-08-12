@@ -10,14 +10,14 @@
   'use strict';
 
   // list out the vars
-  var btns = qsa('.js-btn'),
+  var page = getId('page'),
+      btns = qsa('.js-btn'),
       tModal = qsa('.js-m-template'),
       jModal = qsa('.js-m-ajax'),
-      modal = getId('modal-dialog'),
-      close = getId('modal-close'),
-      mContent = getId('modal-content'),
-      mHolder = getId('modal-holder'),
-      page = getId('page'),
+      mOverlay = getId('modal_dialog'),
+      mClose = getId('modal_close'),
+      mContent = getId('modal_content'),
+      modal = getId('modal_holder'),
       modalOpen = false,
       heading,
       newHeading,
@@ -39,12 +39,11 @@
   // Let's open the modal
   function modalShow () {
     lastFocus = document.activeElement; // keep track of what was last focused
-    lastFocus.blur(); // now unfocus that last element
     page.setAttribute('aria-hidden', 'true'); // hide the contents under the modal
-    modal.setAttribute('aria-hidden', 'false'); // give assistive visibility
+    mOverlay.setAttribute('aria-hidden', 'false'); // give assistive visibility
     modalOpen = true; // used for esc key functionality
-    mHolder.focus();
-    mHolder.setAttribute('tabindex', '0');
+    modal.focus();
+    modal.setAttribute('tabindex', '0');
     document.body.style.overflow = "hidden";
   }
 
@@ -54,17 +53,17 @@
   // but only if modalOpen is set to true
   function modalClose ( event ) {
     if (modalOpen && ( !event.keyCode || event.keyCode === 27 ) ) {
-      page.setAttribute('aria-hidden', 'false'); // unhide the main content
-      modal.setAttribute('aria-hidden', 'true');
-      mHolder.setAttribute('tabindex', '-1');
+      page.setAttribute('aria-hidden', 'false');
+      mOverlay.setAttribute('aria-hidden', 'true');
+      modal.setAttribute('tabindex', '-1');
       modalOpen = false;
       document.body.removeAttribute('style');
       lastFocus.focus();
       mContent.innerHTML = '';
       // refocus on the last element that was in focus before
       // local window opened
-      if (mHolder.hasAttribute('style')) {
-        mHolder.removeAttribute('style');
+      if (modal.hasAttribute('style')) {
+        modal.removeAttribute('style');
       }
     }
   }
@@ -100,10 +99,10 @@
   function labelHeading( e ) {
     // create a new heading
     heading = document.createElement('h1');
-    // give the heading an ID of modal-title
-    heading.setAttribute('id', 'modal-title');
+    // give the heading an ID of modal_title
+    heading.setAttribute('id', 'modal_title');
     // insert the modalTitle
-    mHolder.insertBefore(heading, mContent);
+    modal.insertBefore(heading, mContent);
     // set the new Heading variable to true
     // we'll need this so we can remove any dynamically
     // created label headings from the modal, if a modal
@@ -119,14 +118,11 @@
   // Shift + Tab will allow backup to the top of the modal,
   // and then stop.
   function focusRestrict ( event ) {
-
     document.addEventListener('focus', function( event ) {
-
       if ( modalOpen && !modal.contains( event.target ) ) {
         event.stopPropagation();
         modal.focus();
       }
-
     }, true);
   }
 
@@ -153,11 +149,11 @@
       // // if a button has a data-max-width attribute, take the value
       // and append it to the modalHolder as an inline style
       if (this.hasAttribute('data-max-width')) {
-        mHolder.style.maxWidth = this.getAttribute('data-max-width');
+        modal.style.maxWidth = this.getAttribute('data-max-width');
       }
       // same with above, only for height
       if (this.hasAttribute('data-max-height')) {
-        mHolder.style.maxHeight = this.getAttribute('data-max-height');
+        modal.style.maxHeight = this.getAttribute('data-max-height');
       }
 
       // If we are setting the modal title via data attribute,
@@ -168,7 +164,7 @@
 
         // grab the data-modal-title attribute value and set it as the
         // innerHTML of the mTItle (the heading in the modal window)
-        getId('modal-title').innerHTML = this.getAttribute('data-modal-title');
+        getId('modal_title').innerHTML = this.getAttribute('data-modal-title');
       }
     });
   };
@@ -187,7 +183,7 @@
       // fired before a 'regular content' modal was
       if (newHeading) {
         // remove the leftover dynamic heading
-        mHolder.removeChild(heading);
+        modal.removeChild(heading);
         // reset the newHeading variable to false
         newHeading = false;
       }
@@ -200,10 +196,15 @@
   };
 
 
-
+  // Close modal window by clicking on the overlay
+  mOverlay.addEventListener('click', function( e ) {
+    if (e.target == modal.parentNode) {
+       modalClose( e );
+     }
+  }, false);
 
   // close modal by btn
-  close.addEventListener('click', modalClose);
+  mClose.addEventListener('click', modalClose);
 
   // close modal by keydown, but only if modal is open
   document.addEventListener('keydown', modalClose);
