@@ -3,92 +3,91 @@
   <head>
     <meta charset="utf-8" />
     <title>Accessible Modal Window</title>
-    <link rel="stylesheet" href="css.css" />
-    <link rel="stylesheet" href="css-iframe-specific.css" />
+    <link rel="stylesheet" href="src/css.css" />
+    <link rel="stylesheet" href="src/css-iframe-specific.css" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized"  content="320" />
     <meta name="viewport"         content="width=device-width, minimum-scale=1, initial-scale=1" />
     <style>
       *{-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; font-family: arial;}
       /* page styling css */
-body, html {
-  background: #efefef;
-  margin: 0;
-  padding: 0;
-  -moz-text-size-adjust:100%;
-  -ms-text-size-adjust:100%;
-  -webkit-text-size-adjust:100%;
-  text-rendering:optimizeLegibility;
-}
+      body, html {
+        background: #efefef;
+        margin: 0;
+        padding: 0;
+        -moz-text-size-adjust:100%;
+        -ms-text-size-adjust:100%;
+        -webkit-text-size-adjust:100%;
+      }
 
-.content-area {
-  margin: auto;
-  max-width: 900px;
-  padding: 20px;
-}
+      .content-area {
+        margin: auto;
+        max-width: 900px;
+        padding: 20px;
+      }
 
-.menu {
-  background: #fff;
-  border-bottom: 1px solid #bbb;
-  margin: 0;
-  padding: 12px 8px 0;
-  text-align: center;
-}
+      .menu {
+        background: #fff;
+        border-bottom: 1px solid #bbb;
+        margin: 0;
+        padding: 12px 8px 0;
+        text-align: center;
+      }
 
-input[type="submit"],
-input[type="button"] {
-  -webkit-appearance:none;
-}
+      input[type="submit"],
+      input[type="button"] {
+        -webkit-appearance:none;
+      }
 
-button::-moz-focus-inner,
- input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
+      button::-moz-focus-inner,
+       input::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+      }
 
-a:focus, .btn:focus {
-  box-shadow: 0 0 10px rgba(129,219,219,.75);
-}
+      a:focus, .btn:focus {
+        box-shadow: 0 0 10px rgba(129,219,219,.75);
+      }
 
-input[type="text"]:focus, textarea:focus, .modal-content:focus {
-  outline: 1px solid rgb(129,219,219);
-}
+      input[type="text"]:focus, textarea:focus, .modal-content:focus {
+        outline: 1px solid rgb(129,219,219);
+      }
 
-.btn {
-  background: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 0 0 #000;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 1;
-  margin-bottom: 12px;
-  padding: 8px 12px;
-  position: relative;
-  text-align: center;
-  transition: transform .2s, box-shadow .2s;
-}
+      .btn {
+        background: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 0 0 #000;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 1;
+        margin-bottom: 12px;
+        padding: 8px 12px;
+        position: relative;
+        text-align: center;
+        transition: transform .2s, box-shadow .2s;
+      }
 
-.btn:hover {
-  box-shadow: 0 0 0 4px rgba(0,0,0,.5);
-  border-color: transparent;
-  transform: scale(1.1);
-  z-index: 3;
-}
+      .btn:hover {
+        box-shadow: 0 0 0 4px rgba(0,0,0,.5);
+        border-color: transparent;
+        transform: scale(1.1);
+        z-index: 3;
+      }
 
-label {
-  display: inline-block;
-  font-weight: bold;
-  margin-bottom: .75em;
-}
+      label {
+        display: inline-block;
+        font-weight: bold;
+        margin-bottom: .75em;
+      }
 
-.input {
-  display: block;
-  font-size: 1.5em;
-  margin-bottom: .75em;
-  min-width: 230px;
-  padding: 8px;
-  width: 100%;
-}
+      .input {
+        display: block;
+        font-size: 1.5em;
+        margin-bottom: .75em;
+        min-width: 230px;
+        padding: 8px;
+        width: 100%;
+      }
     </style>
   </head>
 
@@ -229,7 +228,7 @@ label {
       </div>
     </script>
 
-    <script src="js.js"></script>
+    <script src="src/js.js"></script>
 
   </body>
 </html>
