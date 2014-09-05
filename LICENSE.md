@@ -1,4 +1,4 @@
-# A Modal to get in everyone's way
+# Accessible Components
 
 ## MIT License
 

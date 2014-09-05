@@ -1,6 +1,4 @@
-accessible-modal
+Accessible Components
 ================
 
-An accessibility minded modal window written in plain old JavaScript, CSS and mindfully crafted mark-up.
-
-Fun!
+A collection of accessible web components written in vanilla JS & CSS.
