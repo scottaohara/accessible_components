@@ -14,7 +14,7 @@
 
   Where the template polyfill script would be:
 
-  <script type="text/template" id="m-iframe">
+  <script type="text/template" id="m_iframe">
     <div class="modal-aspect" id="modal-video">
       <iframe src="#!" tabindex="0" id="modal-iFrameElement"
               webkitallowfullscreen="webkitallowfullscreen"
@@ -50,8 +50,8 @@
   // create or delete a JS function if we decide to add or remove video buttons
   for (i = 0; i < iModal.length; i++) {
     iModal[i].addEventListener('click', function () {
-      // first get the innerHTML of the template with the id="m-iframe"
-      mContent.innerHTML = getId('m-iframe').innerHTML;
+      // first get the innerHTML of the template with the id="m_iframe"
+      mContent.innerHTML = getId('m_iframe').innerHTML;
       // now that 'mv' is in the DOM, get the ID
       // of the iframe and assign it to 'iFrameElement'
       iFrameElement = getId('modal-iFrameElement');

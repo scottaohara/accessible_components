@@ -19,7 +19,7 @@ swap();
   var mOverlay = getId('modal_window'),
       mOpen = getId('modal_open'),
       mClose = getId('modal_close'),
-      modal = getId('modal-holder'),
+      modal = getId('modal_holder'),
       modalOpen = false,
       lastFocus;
 
