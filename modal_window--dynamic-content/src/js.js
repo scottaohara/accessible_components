@@ -18,6 +18,7 @@
       mClose = getId('modal_close'),
       mContent = getId('modal_content'),
       modal = getId('modal_holder'),
+      allNodes = document.querySelectorAll("*"),
       modalOpen = false,
       heading,
       newHeading,
@@ -118,12 +119,10 @@
   // Shift + Tab will allow backup to the top of the modal,
   // and then stop.
   function focusRestrict ( event ) {
-    document.addEventListener('focus', function( event ) {
-      if ( modalOpen && !modal.contains( event.target ) ) {
-        event.stopPropagation();
-        modal.focus();
-      }
-    }, true);
+    if ( modalOpen && !modal.contains( event.target ) ) {
+      event.stopPropagation();
+      modal.focus();
+    }
   }
 
 
@@ -210,6 +209,8 @@
   document.addEventListener('keydown', modalClose);
 
   // restrict tab focus on elements only inside modal window
-  window.addEventListener('keypress', focusRestrict);
+  for (i = 0; i < allNodes.length; i++) {
+    allNodes.item(i).addEventListener('focus', focusRestrict);
+  }
 
 })();
