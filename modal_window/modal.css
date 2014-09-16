@@ -64,6 +64,10 @@
   outline: 1px dotted;
 }
 
+.btn-close:hover {
+  color: #921c2b;
+}
+
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
