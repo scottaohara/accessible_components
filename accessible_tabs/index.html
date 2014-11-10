@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Accessible Tabs</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
 
@@ -13,14 +13,12 @@
 
         Create a tab menu.
 
-        Remaps the role of an <a> to be a tab item instead, letting screen readers
-        know that these 'links' won't take user to another page.
+        Remaps the role of an <a> to be a tab item instead, letting screen readers know that these 'links' won't take user to another page.
 
         Putting the tabs within an unordered or ordered list will give context
         to screen readers on how many tabs are in your tab grouping.
 
-        e.g. Tab 1 of 3, where as not being in a list will render them as "tab 1"
-        and the 'of how many' isn't reported.
+        e.g. Tab 1 of 3, where as not being in a list will render them as "tab 1" and the 'of how many' isn't reported.
 
         aria-control="" functions as a means to indicate which tab item matches
         up to the appropriate panel
@@ -79,11 +77,14 @@
         </section>
       </div>
 
+      <!--
+        Link back to the tabs is important here, because for a person using
+        their keyboard to navigate a page, why make them have to reverse tab back to move onto the next tab?
+      -->
       <a href="#tab0" id="goto_tabs" class="link-to-tabs">back to tabs</a>
     </div>
 
-    <script async src="tabs.js"></script>
-
+    <script src="assets/tabs.js"></script>
 
   </body>
 </html>

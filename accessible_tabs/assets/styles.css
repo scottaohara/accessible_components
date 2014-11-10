@@ -93,10 +93,19 @@ h1, h2, h3, h4 ,h5 ,h6, p {
 }
 
 .link-to-tabs {
-  position: absolute;
-  right: 4px;
   bottom: 4px;
   font-size: 14px;
+  opacity: 0;
+  position: absolute;
+  right: 4px;
+  transform: translateY(10px);
+  transition: opacity .2s, transform .2s;
+}
+
+.tab-container:hover .link-to-tabs,
+.link-to-tabs:focus {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 
