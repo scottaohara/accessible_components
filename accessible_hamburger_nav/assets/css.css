@@ -1,0 +1,279 @@
+/*
+
+  Document Setup
+
+*/
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: arial;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+header[role="banner"] {
+  border-bottom: 1px solid #ccc;
+  padding: 40px 0;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 20px 60px;
+}
+
+
+/*
+
+  Navigation
+
+  General Setup
+
+*/
+
+.nav {
+  left: 20px;
+  padding: 6px 0;
+  position: fixed;
+  top: 20px;
+  transition: transform .2s;
+}
+
+
+.nav-list {
+  background: #000;
+  height: .25em;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transition: font-size .2s;
+  width: 1.25em;
+  white-space: nowrap;
+}
+
+
+  .nav-list:after,
+  .nav-list:before {
+    background: rgba(0,0,0,1);
+    content:'';
+    height: 4px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: height .2s, width .2s, right .2s, left .2s;
+    width: 100%;
+  }
+
+  .nav-list:before {
+    transform: translateY(-6px);
+  }
+
+  .nav-list:after {
+    transform: translateY(6px);
+  }
+
+
+.nav-list li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 8px;
+}
+
+.nav-list a {
+  color: rgba(0,0,0,1);
+  display: block;
+  font-size: 100%;
+  font-weight: bold;
+  padding: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  visibility: hidden;
+}
+
+
+.btn--nav {
+  background: transparent;
+  border: 0;
+  color: transparent;
+  cursor: pointer;
+  display: block;
+  font-size: .01em;
+  height: 100%;
+  left: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  transition: font-size .2s;
+  top: 0;
+  width: 100%;
+  z-index: 12;
+}
+
+
+
+/*
+
+  Navigation
+
+  Closed State
+
+*/
+
+.nav[data-state="closed"] .nav-list {
+  pointer-events: none;
+}
+
+.nav[data-state="closed"] .nav-list li {
+  display: none;
+}
+
+.nav[data-state="closed"] .nav-list a {
+  color: rgba(0,0,0,0);
+  font-size: .001em;
+  opacity: 0;
+  transition: color .2s .2s;
+}
+
+.nav[data-state="closed"] .btn--nav:focus,
+.nav[data-state="closed"] .btn--nav:hover {
+  outline: 4px solid #000;
+  outline-offset: 4px;
+}
+
+
+/*
+
+  Navigation
+
+  Open State
+
+*/
+
+.nav[data-state="open"] {
+  background: rgba(222,222,222,.9);
+  padding: 0;
+  transform: translate(-20px, -20px);
+  width: 100%;
+}
+
+
+.nav[data-state="open"] .nav-list {
+  background: rgba(0,0,0,0);
+  height: 100%;
+  padding: 0 0 0 72px;
+  pointer-events: inherit;
+  width: 100%;
+}
+
+  .nav[data-state='open'] .nav-list:before,
+  .nav[data-state='open'] .nav-list:after {
+    height: 100%;
+    transform: translateY(0);
+    width: 4px;
+  }
+
+  .nav[data-state='open'] .nav-list:after {
+    left: auto;
+    right: 0;
+  }
+
+
+.nav[data-state='open'] .nav-list a {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.nav[data-state='open'] .btn--nav {
+  background: #808080;
+  color: #fff;
+  font-size: 1.75em;
+  height: 100%;
+  left: 4px;
+  padding-top: 6px;
+  width: 2em;
+}
+
+  .nav[data-state="open"] .btn--nav:focus,
+  .nav[data-state="open"] .btn--nav:hover {
+    background: #901932;
+  }
+
+
+
+
+
+/*
+
+  No JS Fallback
+
+*/
+
+.btn--nav--close {
+  display: none;
+  visibility: hidden;
+}
+
+.no-js .nav-list li{
+  display: none
+}
+
+.no-js .nav:target .btn--nav {
+  display: none;
+}
+
+.no-js .nav:target {
+  background: #ddd;
+  border-bottom: 1px solid #777;
+  left: 0;
+  top: 0;
+  width: 100%
+}
+
+.no-js .nav:target .nav-list {
+  background: transparent;
+  height: auto;
+  overflow: hidden;
+  padding-left: 64px;
+  width: 100%;
+}
+
+.no-js .nav:target .nav-list:before,
+.no-js .nav:target .nav-list:after {
+  display: none;
+}
+
+.no-js .nav:target li {
+  float: left;
+  display: block;
+}
+
+.no-js .nav:target a {
+  visibility: visible;
+}
+
+.no-js .nav:target .btn--nav--close {
+  bottom: 0;
+  color: #000;
+  display: block;
+  font-size: 26px;
+  left: 0;
+  line-height: 1.5;
+  padding: 8px;
+  position: absolute;
+  text-decoration: none;
+  top: 0;
+  visibility: visible;
+}
+
+.no-js .btn--nav:focus ~ .nav-list,
+.no-js .btn--nav:focus ~ .nav-list {
+  outline: 4px solid #000;
+  outline-offset: 4px;
+}
