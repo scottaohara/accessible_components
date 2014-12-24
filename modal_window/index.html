@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Accessible Modal Window</title>
-    <link rel='stylesheet' href="modal.css" />
+    <link rel="stylesheet" href="assets/modal.css" />
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
   </head>
   <body id="body">
@@ -21,8 +21,10 @@
         </h1>
 
         <p>
-          This modal window is made with plain old semantic mark-up, CSS and
-          a very little bit of JavaScript.
+          This modal window is made with semantic mark-up,
+          CSS and a very little bit of JavaScript to trigger the
+          modal window's appearing/dismissal, and adding the
+          appropriate ARIA attributes as needed.
         </p>
 
         <p>
@@ -42,16 +44,16 @@
 
         <p>
           Here's a link to the
-          <a href="https://en.wikipedia.org/wiki/Modal_window">wikipedia entry on modal windows</a>.
+          <a href="https://en.wikipedia.org/wiki/Modal_window">
+            Wikipedia entry on modal windows
+          </a>.
         </p>
       </article> <!-- end .content-area -->
     </div> <!-- end #page -->
 
-    <div class="modal-overlay" id="modal_window"
-             aria-hidden="true" role="dialog"
-             aria-labelledby="modal_title">
+    <div class="modal-overlay" id="modal_window">
 
-      <div class="modal-content" id="modal_holder" role="document">
+      <div class="modal-content" id="modal_holder">
 
           <h1 id="modal_title">Modal Title</h1>
           <form>
@@ -61,7 +63,7 @@
             <label for="email">Email:</label>
             <input type="email" id="email" class="input" placeholder="Gimmie ur Email" />
 
-            <input type="submit" class='btn' value="Submit Form" />
+            <input type="submit" class="btn" value="Submit Form" />
           </form>
 
         <button class="btn-close" id="modal_close" type="button" aria-label="close">
@@ -72,6 +74,6 @@
 
     </div> <!-- end .modal-overlay -->
 
-      <script async src="modal.js"></script>
+      <script async src="assets/modal.js"></script>
   </body>
 </html>

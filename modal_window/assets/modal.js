@@ -1,38 +1,50 @@
-// helper function to place modal window as the first child
-// of the #page node
-var m = document.getElementById('modal_window'),
-    p = document.getElementById('page');
-
-function swap () {
-  p.parentNode.insertBefore(m, p);
-}
-
-swap();
-
-
 // modal window
-(function() {
+;(function() {
 
   'use strict';
 
   // list out the vars
-  var mOverlay = getId('modal_window'),
-      mOpen = getId('modal_open'),
-      mClose = getId('modal_close'),
-      modal = getId('modal_holder'),
-      allNodes = document.querySelectorAll("*"),
+  var mOverlay = id('modal_window'),
+      mOpen = id('modal_open'),
+      mClose = id('modal_close'),
+      modal = id('modal_holder'),
+      allNodes = document.querySelectorAll('*'),
       modalOpen = false,
       lastFocus,
-      i;
+      i,
+      p = document.getElementById('page');
+      // be sure to replace p with the appropriate
+      // ID of your document wrapper element.
 
 
-  // Let's cut down on what we need to type to get an ID
-  function getId ( id ) {
+  // Helper function to cut down on what we need to type to get an ID
+  function id ( id ) {
     return document.getElementById(id);
   }
 
+  // helper function to place modal window as the first child
+  // of the #page node
+  function swap () {
+    p.parentNode.insertBefore(mOverlay, p);
+  }
 
-  // Let's open the modal
+  swap();
+
+
+  // set aria attributes to modal elements.
+  // Doing this in case JavaScript doesn't load, so that
+  // there aren't aria attributes attached to something
+  // that doesn't behave the way it should, due to lack of JS.
+  mOverlay.setAttribute('aria-hidden', true);
+  mOverlay.setAttribute('role', 'dialog');
+  mOverlay.setAttribute('aria-labelledby', 'modal_title');
+
+  modal.setAttribute('role', 'document');
+  // this role has been added to take care of a bug in the way
+  //
+
+
+  // Open the modal
   function modalShow () {
     lastFocus = document.activeElement;
     mOverlay.setAttribute('aria-hidden', 'false');
