@@ -4,7 +4,9 @@
 
 */
 
-*, *:after, *:before {
+*,
+*:after,
+*:before {
   box-sizing: border-box;
 }
 
@@ -51,8 +53,8 @@ header[role="banner"] {
   padding: 0;
   position: relative;
   transition: font-size .2s;
-  width: 1.25em;
   white-space: nowrap;
+  width: 1.25em;
 }
 
 
