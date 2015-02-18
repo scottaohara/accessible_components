@@ -272,6 +272,7 @@ header[role="banner"] {
   text-decoration: none;
   top: 0;
   visibility: visible;
+  z-index: 4;
 }
 
 .no-js .btn--nav:focus ~ .nav-list,
