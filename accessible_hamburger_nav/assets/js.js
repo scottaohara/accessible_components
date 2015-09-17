@@ -24,7 +24,10 @@
   function removeClass( e, deleteClass ) {
     e.className = e.className.replace(new RegExp("\\b" + deleteClass + "\\b", 'g'), '').trim();
   }
-  removeClass( noJS[0], 'no-js');
+
+  // run the function
+  removeClass( noJS[0], 'no-js' );
+
 
   // nav element
   theNav.setAttribute('data-state', 'closed');
