@@ -3,6 +3,13 @@
 
   $.tabs = function(el, options) {
 
+  // Author(s):
+  //     Scott O'Hara - github.com/scottaohara
+  //     Matt Casserly - github.com/mattcass
+  // License:
+  //     https://github.com/scottaohara/accessible-components/blob/master/LICENSE.md
+
+
       var self         = this;
       this.$el         = $(el);
       this.$tabMenu    = this.$el.find('.tab-menu');
