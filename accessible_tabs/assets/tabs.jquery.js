@@ -45,7 +45,7 @@
           self.$tabs.attr('tabindex', '-1');
 
           self.$tabs.each(function(i){
-            parseInt(i);
+            parseInt(i, 10);
             $(this).attr('aria-controls', 'panel' + (i + 1) );
           });
 
@@ -147,9 +147,9 @@
         }
         keytrols();
 
-      }
+      };
       self.init();
-    }
+    };
 
     $.fn.Tabs = function(options) {
       return this.each(function() {
