@@ -53,9 +53,10 @@ function qsa ( qsa ) {
       panels[i].setAttribute('role', 'tabpanel');
       panels[i].setAttribute('aria-labelledby', tabs[i].id);
 
-      // set the first child of each panel to have a tabindex 0
-      // so it can be focusable on tab change.
-      panels[i].children[0].setAttribute('tabindex', '0');
+      // set the first child of each panel to have a tabindex -1
+      // so it can be focusable on tab change, but not focused
+      // on normal tabbing through the DOM
+      panels[i].children[0].setAttribute('tabindex', '-1');
     }
 
 

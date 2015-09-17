@@ -27,7 +27,7 @@
           // set the UL to have a role of tablist
           self.$tabMenu.attr('role', 'tablist');
           // and show it as long as JS is enabled
-          self.$tabMenu.addClass('d-block');
+          self.$tabMenu.show();
 
           // Set the list items to a presentation role
           self.$tabMenuLi.attr('role', 'presentation');
@@ -52,9 +52,10 @@
           });
 
 
-         // set the first child of each panel to have a tabindex 0
-         // so it can be focusable on tab change.
-         self.$panels.children().attr('tabindex', '0');
+         // set the first child of each panel to have a tabindex -1
+         // so it can be focusable on tab change, but not focused
+         // on normal tabbing through the DOM
+         self.$panels.children().attr('tabindex', '-1');
 
          // Reset the default tab to aria-selected='true'
          // and default panel to aria-hidden='false'
@@ -141,7 +142,7 @@
 
       }
       self.init();
-    }  
+    }
 
     $.fn.Tabs = function(options) {
       return this.each(function() {
@@ -152,6 +153,5 @@
 })(jQuery);
 
 
-  
 $('.tab-container').Tabs();
 
