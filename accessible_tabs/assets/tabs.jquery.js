@@ -74,8 +74,10 @@
 
        // Set up click events
        function assignClicks() {
-         self.$tabs.on('click', function(){
+         self.$tabs.on('click', function(e){
+           e.preventDefault();
            updateTab(this);
+           return false;
          });
        }
        assignClicks();
@@ -96,7 +98,7 @@
          // panel set to aria-hidden false, while the others/previous become true
          var current_id = activeTab.attr('href').substring(1);
          var current_panel = self.$el.find('.tab-panel-container #' + current_id);
-         console.log(current_panel);
+         //console.log(current_panel);
          current_panel.attr('aria-hidden', false);
          current_panel.children().focus();
         }
