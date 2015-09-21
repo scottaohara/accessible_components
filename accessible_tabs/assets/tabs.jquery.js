@@ -87,12 +87,16 @@
        function updateTab(activeTab) {
          self.$tabs.attr('aria-selected', false);
          self.$tabs.attr('tabindex', '-1');
+         self.$tabs.removeAttr('aria-live');
          self.$panels.attr('aria-hidden', true);
 
          // set selected tab to aria-selected true
          activeTab = $(activeTab);
-         activeTab.attr('aria-selected', true);
-         activeTab.attr('tabindex', 0);
+         activeTab.attr({
+            'aria-selected' : true,
+            'tabindex' : 0,
+            'aria-live' : 'polite'
+          });
 
          // Then take the href, convert to ID and make the corresponding
          // panel set to aria-hidden false, while the others/previous become true

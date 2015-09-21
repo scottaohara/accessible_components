@@ -79,8 +79,7 @@ function qsa ( qsa ) {
 
     gotoTabs.addEventListener('click', function() {
       var goTo = gotoTabs.getAttribute('href').substring(1);
-      // firefox needs a timeout of 10 to keep focus on the <a>
-      // cause lol
+      // firefox needs a timeout of 10 to keep focus on the <a> cause lol
       window.setTimeout(function (){ id(goTo).focus(); },10);
     });
   }
@@ -91,12 +90,14 @@ function qsa ( qsa ) {
     for (i = 0; i < totalPanels; i++) {
       tabs[i].setAttribute('aria-selected', false);
       tabs[i].setAttribute('tabindex', '-1');
+      tabs[i].removeAttribute('aria-live');
       panels[i].setAttribute('aria-hidden', true);
     }
 
     // set selected tab to aria-selected true
     activeTab.setAttribute('aria-selected', true);
     activeTab.setAttribute('tabindex', 0);
+    activeTab.setAttribute('aria-live', 'polite');
 
     // Then take the href, convert to ID and make the corresponding
     // panel set to aria-hidden false, while the others/previous become true
