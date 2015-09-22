@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Accessible Modal Window</title>
+    <link rel="stylesheet" href="assets/modal.css" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
+  </head>
+  <body id="body">
+    <div id="page">
+
+      <div class="menu">
+        <button class="btn" type="button" id="modal_open">Open the Modal</button>
+      </div>
+
+      <article class="content-area">
+
+        <h1>
+          Demo:<br />
+          An accessible Modal Window with JavaScript &amp; CSS
+        </h1>
+
+        <p>
+          This version of the accessible modal window has been converted to jQuery.
+        </p>
+
+        <p>
+          Check out the original <a href="http://codepen.io/scottohara/pen/lIdfv">vanilla JS source code on codepen</a> to see how it works!
+        </p>
+
+        <form action="#">
+          <label for="test" class="label">Label for Input</label>
+          <input type="text" id="test" class="input" />
+
+          <label for="test2" class="label">Label for Second Input</label>
+          <input type="text" id="test2" class="input" />
+
+          <label for="test3" class="label">Label for Third Input</label>
+          <input type="text" id="test3" class="input" />
+        </form>
+
+        <p>
+          Here's a link to the
+          <a href="https://en.wikipedia.org/wiki/Modal_window">
+            Wikipedia entry on modal windows
+          </a>.
+        </p>
+      </article> <!-- end .content-area -->
+    </div> <!-- end #page -->
+
+    <div class="modal-overlay" id="modal_window">
+
+      <div class="modal-content" id="modal_holder">
+
+          <h1 id="modal_title">Modal Title</h1>
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="input" placeholder="Gimmie ur Name" />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="input" placeholder="Gimmie ur Email" />
+
+            <input type="submit" class="btn" value="Submit Form" />
+          </form>
+
+        <button class="btn-close" id="modal_close" type="button" aria-label="close">
+          &times;
+        </button>
+
+      </div> <!-- end .modal-content -->
+
+    </div> <!-- end .modal-overlay -->
+      <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script async src="assets/modal.jquery.js"></script>
+  </body>
+</html>
