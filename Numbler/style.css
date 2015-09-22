@@ -1,0 +1,105 @@
+/*
+  Fix box-sizing for easier layout styling
+*/
+*,*:before,*:after{box-sizing:border-box}
+
+
+/*
+  Make accessible, visually hidden labels for the buttons
+*/
+.is-visually-hidden{
+  border:0 !important;
+  color:transparent;
+  height:1px !important;
+  left:-999999px !important;
+  position:absolute !important;
+  width:1px !important}
+
+
+/*
+  Input and input container styling
+*/
+input{
+  font-size:inherit;
+  font-family:inherit}
+
+input[type='number']{
+  border:1px solid #242a2d;
+  border-radius:2px;
+  color:#333;
+  font-family:"Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  outline:0;
+  padding:0.5em 0.25em;
+  width:100%;
+  -webkit-appearance:none}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto}
+
+.clean-input-number::-webkit-inner-spin-button,
+.clean-input-number::-webkit-outer-spin-button {
+  -webkit-appearance: none}
+
+.clean-input-number {
+  -moz-appearance: textfield}
+
+.number-input-area {
+  position: relative}
+
+.number-input-area input[type="number"] {
+  padding-right: 80px}
+
+.no-js .number-input-area input[type="number"] {
+  padding-right: 4px}
+
+
+/*
+  Button pill & base button styling
+*/
+.btn-pill-area--numbers {
+  display: none;
+  height: 100%;
+  margin-bottom: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.btn-pill-area--numbers .btn {
+  height: 100%;
+  min-width: 32px !important;
+}
+
+.btn-pill-area:after{clear:both;
+  content:'';
+  display:table}
+
+.btn-pill-area .btn--pill:first-child{border-radius:2px 0 0 2px}
+.btn-pill-area .btn--pill:last-child{border-radius:0 2px 2px 0}
+.btn-pill-area>:not(:first-child){border-left:none}
+.btn-pill-area .btn{border-radius:0;
+  height:100%;
+  float:left;
+  margin:0;
+  max-width:40px}
+
+/* restyle buttons to your heart's content */
+.btn {
+  -webkit-appearance:none;
+  background: #fff;
+  background-repeat:no-repeat;
+  border:1px solid;
+  border-radius:2px;
+  cursor:pointer;
+  display:inline-block;
+  font-family:inherit;
+  font-size:inherit;
+  font-weight:400;
+  line-height:normal;
+  padding:.5em .75em;
+  text-align:center;
+  text-decoration:none !important;
+  text-transform:uppercase;
+  vertical-align:middle}

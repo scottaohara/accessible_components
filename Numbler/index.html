@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <title>Numbler.js</title>
+    <link rel="stylesheet" href="style.min.css" />
+    <meta name="viewport"         content="width=device-width, minimum-scale=1, initial-scale=1" />
+    <style>
+      /* demo styling */
+      body{font-size:18px;font-family:helvetica, arial;line-height:1.333;margin:0;padding:30px}.demo{max-width:500px;margin:auto}.form-row{position:relative;margin-bottom:20px}.form-row:last-child{margin-bottom:0}em{font-size:.85em}#demo{padding:20px;margin:12px 0;border:1px solid #ccc}pre{background:#111;color:#eee;overflow:auto;font-size:14px;padding:0 8px 12px;width:calc(100% + 200px);margin-left:-100px}@media screen and (max-width: 700px){pre{margin-left:0;width:auto}}::-moz-selection{background:#333;color:#fff;text-shadow:none}::selection{background:#333;color:#fff;text-shadow:none}.no-js #markup{display:none}p code{background:#333;color:#eee;padding:4px;display:inline-block;vertical-align:middle;font-size:14px}
+    </style>
+  </head>
+
+  <body>
+
+    <article class="demo">
+      <h1>Numbler.js</h1>
+      <p>
+        Numbler.js is a small jQuery plug-in <em>(1,082 bytes minified)</em> and CSS file <em>(1,692 bytes minified)</em> that allows for greater consistency and control over the experience and styling of the number input, across browsers.
+      </p>
+
+      <p>
+        Since Numbler is based on the <code>input[type="number"]</code>, if JavaScript is unavailable, it continues to work as it would in browsers that support the number input, and falls back to a standard text input in browsers that don't support the number input.
+      </p>
+
+      <section id="demo">
+        <h2 class="is-visually-hidden">
+          Numbler in action
+        </h2>
+
+        <div class="examples">
+<div class="form-row">
+  <label for="unique_ID">
+    Label:
+  </label>
+  <div class="number-input-area">
+    <input type="number"
+           id="unique_ID"
+           name="unique_ID"
+           min="-10"
+           step="1"
+           class="js-numbler" />
+
+    <div class="btn-pill-area btn-pill-area--numbers">
+      <button type="button" class="btn js-num-up" aria-controls="unique_ID">
+        <span class="is-visually-hidden">Increase</span>
+        <span aria-hidden="true">+</span>
+      </button>
+
+      <button type="button" class="btn js-num-down" aria-controls="unique_ID">
+        <span class="is-visually-hidden">Decrease</span>
+        <span aria-hidden="true">-</span>
+      </button>
+    </div> <!-- end .btn-pill-area--numbers -->
+  </div> <!-- end .number-input-area -->
+</div>
+
+<div class="form-row">
+  <label for="unique_ID2">
+    Label:
+  </label>
+  <div class="number-input-area">
+    <input type="number"
+           id="unique_ID2"
+           name="unique_ID2"
+           min="1"
+           step="2"
+           value="1"
+           class="js-numbler" />
+
+    <div class="btn-pill-area btn-pill-area--numbers">
+      <button type="button" class="btn js-num-up" aria-controls="unique_ID2">
+        <span class="is-visually-hidden">Increase</span>
+        <span aria-hidden="true">+</span>
+      </button>
+
+      <button type="button" class="btn js-num-down" aria-controls="unique_ID2">
+        <span class="is-visually-hidden">Decrease</span>
+        <span aria-hidden="true">-</span>
+      </button>
+    </div> <!-- end .btn-pill-area--numbers -->
+  </div> <!-- end .number-input-area -->
+          </div>
+        </div> <!-- end .examples -->
+      </section> <!-- end #demo -->
+
+      <section id="markup">
+        <h3>Initial Mark-up:</h3>
+        <p>
+          Below you'll find the mark-up needed to get Numbler up and running on your website/application.
+        </p>
+        <pre><code></code></pre>
+
+        <p>
+          The following attributes will have default values set if they are not added to the initial state of the number input:
+        </p>
+        <ul>
+          <li>min</li>
+          <li>max</li>
+          <li>step</li>
+        </ul>
+      </section>
+
+
+      <section id="support">
+        <h3>Support</h3>
+        <p>
+          Numbler.js has been tested in all modern browsers:
+        </p>
+        <ul>
+          <li>Safari 8+ (mobile &amp; Desktop)</li>
+          <li>Chrome Latest</li>
+          <li>Firefox Latest</li>
+          <li>Internet Explorer 11</li>
+          <li>Opera Latest</li>
+        </ul>
+        <p>
+          Numbler even works in Internet Explorer 9 + 10, with the only caveat being that these versions of Internet Explorer don't return <abbr title="not a number">NaN</abbr> when a value such as "1asdf" is entered, resulting in the input not being reset to the min value on blur.
+        </p>
+        <p>
+          The inclusion of the <code>aria-controls</code>, <code>role="alert"</code> and <code>aria-live="assertive"</code> helps make these custom controls more accessible by providing necessary functional clarity to assistive technologies, like screen readers (e.g. <a href="http://www.nvaccess.org/"><abbr title="NonVisual Desktop Access">NVDA</abbr></a>, <a href="https://www.apple.com/voiceover/info/guide/">Voice Over</a> and <a href="https://en.wikipedia.org/wiki/JAWS_%28screen_reader%29"><abbr title="Job Access With Speech">JAWS</abbr></a>).
+        </p>
+      </section>
+
+
+      <section id="contributers">
+        <h3>Contributors</h3>
+        <p>
+          Thanks goes out to <a href="https://github.com/wwnjp">Josh Drumm</a> and <a href="https://github.com/mattcass">Matt Casserly</a> for helping me test/develop this plug-in. And to <a href="https://github.com/jpamental">Jason Pamental</a> for coming up with a much better name for it than I had originally intended.
+        </p>
+      </section>
+
+    </article>
+
+
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+      // copy an example of the demo mark-up to show
+      // in a code block
+      $('html').removeClass('no-js');
+      var $grabHTML = $('.examples .form-row').html(),
+          $cleanHTML = $grabHTML.replace(/</g, '&lt;');
+      $('#markup code').html($cleanHTML);
+    </script>
+    <script src="numbler.min.js"></script>
+
+  </body>
+</html>
