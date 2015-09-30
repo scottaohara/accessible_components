@@ -10,3 +10,5 @@ Have a look see...
 • https://github.com/scottaohara/Numbler
 
 • https://github.com/scottaohara/figcaption-reveal
+
+• https://github.com/scottaohara/accessible_tabs
