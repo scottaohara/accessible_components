@@ -6,6 +6,7 @@ Check them out. I hope they will be useful to you
 
 * [Accessible Modal Window Component](https://github.com/scottaohara/accessible_modal_window)
 * [Keyboard & Screen Reader Friendly, Custom Number Input](https://github.com/scottaohara/Numbler)
+* [Tooltips](https://github.com/scottaohara/a11y_tooltips)  
 * [Hamburger Button](https://github.com/scottaohara/accessible_hamburger)
 * [Auto Generated ARIA (or not) Tabs](https://github.com/scottaohara/accessible_tabs)
 * [Auto Generated ARIA Accordions](https://github.com/scottaohara/accessible_accordions)
