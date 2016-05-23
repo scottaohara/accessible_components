@@ -13,7 +13,7 @@ That stuff used to live here, but now that stuff has moved to the links below.
 
 There will be more to come...
 
-In the meantime, if you end up using any of these components, please let me know!  
+In the meantime, if you end up using any of these components, [please let me know](http://twitter.com/scottohara)!  
 
 And most importantly, if anyone ever finds an issue with a compontent listed here, please file an issue on the linked component's GitHub repository.
 
