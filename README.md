@@ -11,6 +11,7 @@ That stuff used to live here, but now that stuff has moved to the links below.
 * [Auto Generated ARIA (or not) Tabs](https://github.com/scottaohara/accessible_tabs)  
 * [Auto Generated ARIA Accordions](https://github.com/scottaohara/accessible_accordions)  
 * [Hidden Figcaptions Revealed on Hover/Focus](https://github.com/scottaohara/figcaption-reveal)  
+* [ARIA Switch Button](https://github.com/scottaohara/aria-switch-button)  
 * [ARIA Links](https://github.com/scottaohara/aria-links)  
 
 There will be more to come...
