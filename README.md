@@ -1,5 +1,4 @@
-#Accessible Components
-
+# Accessible Components
 I've built some accessible components based on testing and specs.  
 That stuff used to live here, but now that stuff has moved to the links below.  
 
@@ -21,7 +20,6 @@ That stuff used to live here, but now that stuff has moved to the links below.
 
 
 ### More to come...
-
 This is an on-going project of mine that I don't see an end-date to, so please expect more scripts (and non-JS markup & CSS patterns) as time permits :)
 
 In the meantime, if you end up using any of these components, [please let me know](http://twitter.com/scottohara)!  
