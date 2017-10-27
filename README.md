@@ -1,6 +1,8 @@
-# Accessible Components
-I've built some accessible components based on testing and specs.  
-That stuff used to live here, but now that stuff has moved to the links below.  
+# Accessible Components  
+
+I've built some accessible components based on testing with users, needs of past projects, and official specifications.  
+
+These components all reside in their own individual repositories. Some are written in ES5 JavaScript, and can be easily added to any exiting project. Others require jQuery as a dependency. While some are just straight markup patterns and any additional functionality would need to be supplied via the underlying language of a particular project (e.g. PHP, Ruby, more JavaScript)  
 
 ## Vanilla JavaScripts
 * [ARIA Accordions](https://github.com/scottaohara/accessible_accordions)  
