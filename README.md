@@ -9,13 +9,13 @@ These components all reside in their own individual repositories. Some are writt
 * [ARIA Toggle Blocks](https://github.com/scottaohara/aria_toggle_blocks)  
 * [ARIA Switch Button](https://github.com/scottaohara/aria-switch-button)  
 * [ARIA Links](https://github.com/scottaohara/aria-links)  
-* [Hidden Figcaptions Revealed on Hover/Focus](https://github.com/scottaohara/figcaption-reveal)  
 * [ARIA Buttons](https://github.com/scottaohara/a11y_button)  
+* [Hidden FigCaptions Revealed on Hover/Focus](https://github.com/scottaohara/figcaption-reveal)   
 
 ## jQuery Scripts
 * [Accessible Modal Window - version 2](https://github.com/scottaohara/accessible_modal_window)  
-* [Auto Generated ARIA (or not) Tabs](https://github.com/scottaohara/accessible_tabs)  
-* [Hamburger Button](https://github.com/scottaohara/accessible_hamburger)  
+* [ARIA (or not) Tabs](https://github.com/scottaohara/accessible_tabs)  
+* [Hamburger Menu Button](https://github.com/scottaohara/accessible_hamburger)  
 * [Tooltips](https://github.com/scottaohara/a11y_tooltips)  
 * [Keyboard & Screen Reader Friendly, Custom Number Input Component](https://github.com/scottaohara/Numbler)  
 
@@ -23,10 +23,10 @@ These components all reside in their own individual repositories. Some are writt
 * [Breadcrumb Navigation](https://github.com/scottaohara/a11y_breadcrumbs)  
 
 ### More to come...
-This is an on-going project of mine that I don't see an end-date to, so please expect more scripts (and non-JS markup & CSS patterns) as time permits :)
+This is an on-going project, so expect to see more scripts (and non-JS markup & CSS patterns) as time permits.  
 
-In the meantime, if you end up using any of these components, [please let me know](http://twitter.com/scottohara)!  
+If you end up using any of these components, [please let me know](https://twitter.com/scottohara)!  
 
-And most importantly, if anyone ever finds an issue with a compontent listed here, please file an issue on the linked component's GitHub repository.
+And most importantly, if there's ever a bug or awkward/inaccessible qukrk with a compontent listed here, please file an issue here or in the component's GitHub repository.
 
 Thanks!
