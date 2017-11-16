@@ -16,7 +16,7 @@ These components all reside in their own individual repositories. Some are writt
 * [Accessible Modal Window - version 2](https://github.com/scottaohara/accessible_modal_window)  
 * [ARIA (or not) Tabs](https://github.com/scottaohara/accessible_tabs)  
 * [Hamburger Menu Button](https://github.com/scottaohara/accessible_hamburger)  
-* [Tooltips](https://github.com/scottaohara/a11y_tooltips)  
+* [Tooltips (ARIA 1.0)](https://github.com/scottaohara/a11y_tooltips)  
 * [Keyboard & Screen Reader Friendly, Custom Number Input Component](https://github.com/scottaohara/Numbler)  
 
 ## Markup Components  
