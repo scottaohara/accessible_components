@@ -28,6 +28,6 @@ This is an on-going project, so expect to see more scripts (and non-JS markup & 
 
 If you end up using any of these components, [please let me know](https://twitter.com/scottohara)!  
 
-And most importantly, if there's ever a bug or awkward/inaccessible qukrk with a compontent listed here, please file an issue here or in the component's GitHub repository.
+And most importantly, if there's ever a bug or awkward/inaccessible quirk with a component listed here, please file an issue here or in the component's GitHub repository.
 
 Thanks!
