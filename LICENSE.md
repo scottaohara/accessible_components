@@ -1,6 +1,7 @@
 # Accessible Components
 
 ## MIT License
+
 Copyright &copy; 2014 - 2018
 
 Built by Scott O'Hara // github: @scottaohara / twitter: @scottohara
