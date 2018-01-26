@@ -21,6 +21,7 @@ These components all reside in their own individual repositories. Some are writt
 
 ## Markup Components  
 * [Breadcrumb Navigation](https://github.com/scottaohara/a11y_breadcrumbs)  
+* [Landmarks Demonstration](https://github.com/scottaohara/landmarks_demo)
 
 ### More to come...
 This is an on-going project, so expect to see more scripts (and non-JS markup & CSS patterns) as time permits.  
