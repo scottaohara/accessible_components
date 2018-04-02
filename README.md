@@ -8,12 +8,12 @@ These components all reside in their own individual repositories. Some are writt
 * [ARIA Accordions](https://github.com/scottaohara/accessible_accordions)  
 * [ARIA Toggle Blocks](https://github.com/scottaohara/aria_toggle_blocks)  
 * [ARIA Switch Button](https://github.com/scottaohara/aria-switch-button)  
+* [ARIA Modal Dialogs (v3)](https://github.com/scottaohara/accessible_modal_window)
 * [ARIA Links](https://github.com/scottaohara/aria-links)  
-* [ARIA Buttons](https://github.com/scottaohara/a11y_button)  
-* [Hidden FigCaptions Revealed on Hover/Focus](https://github.com/scottaohara/figcaption-reveal)   
+* [ARIA Buttons](https://github.com/scottaohara/a11y_button)    
 
 ## jQuery Scripts
-* [Accessible Modal Window - version 2](https://github.com/scottaohara/accessible_modal_window)  
+* [ARIA Modal Dialogs (v2) (archived)](https://github.com/scottaohara/accessible_modal_window/tree/version_2_archive)  
 * [ARIA (or not) Tabs](https://github.com/scottaohara/accessible_tabs)  
 * [Hamburger Menu Button](https://github.com/scottaohara/accessible_hamburger)  
 * [Tooltips (ARIA 1.0)](https://github.com/scottaohara/a11y_tooltips)  
