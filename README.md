@@ -6,7 +6,7 @@ These components all live in their own individual repositories. Some are written
 
 ## Vanilla JavaScripts
 * [ARIA Accordions](https://github.com/scottaohara/accessible_accordions)  
-* [ARIA Toggle Blocks](https://github.com/scottaohara/aria_toggle_blocks)  
+* [ARIA Disclosure Widgets](https://github.com/scottaohara/aria_disclosure_widget)  
 * [ARIA Switch Button](https://github.com/scottaohara/aria-switch-button)  
 * [ARIA Modal Dialogs (v3)](https://github.com/scottaohara/accessible_modal_window)
 * [ARIA Links](https://github.com/scottaohara/aria-links)  
