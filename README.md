@@ -1,8 +1,8 @@
 # Accessible Components  
 
-I've built some accessible components based on testing with users, needs of past projects, and official specifications.  
+I've built some accessible components based on testing with users, needs of past projects, and official specifications. Also, I just like making these things :)   
 
-These components all reside in their own individual repositories. Some are written in ES5 JavaScript, and can be easily added to any exiting project. Others require jQuery as a dependency. While some are just straight markup patterns and any additional functionality would need to be supplied via the underlying language of a particular project (e.g. PHP, Ruby, more JavaScript)  
+These components all live in their own individual repositories. Some are written in ES5 JavaScript, and should be pretty easy to add to an exiting project. Other older scripts require jQuery as a dependency. There are even a few that are just straight markup patterns, and any additional functionality would need to be supplied via the underlying language of a particular project (e.g. PHP, Ruby, more JavaScript).  
 
 ## Vanilla JavaScripts
 * [ARIA Accordions](https://github.com/scottaohara/accessible_accordions)  
@@ -28,6 +28,6 @@ This is an on-going project, so expect to see more scripts (and non-JS markup & 
 
 If you end up using any of these components, [please let me know](https://twitter.com/scottohara)!  
 
-Most importantly, if you ever come across a bug or awkward UX quirk with a component listed here, please [file an issue here](https://github.com/scottaohara/accessible_components/issues/new) or in the component's GitHub repository.
+Most importantly, if you ever come across a bug or awkward UX quirk with a component listed here, please [file an issue here](https://github.com/scottaohara/accessible_components/issues/new), or in the specific component's GitHub repository.
 
 Thanks!
