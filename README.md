@@ -1,8 +1,8 @@
 # Accessible Components  
 
-I've built some accessible components based on testing with users, needs of past projects, and official specifications. Also, I just like making these things :)   
+I've built a godo handfull of accessible markup patterns and widgts based on testing with users, needs of past projects, and from following W3C specifications & notes. Also, I just like making these things :)   
 
-These components all live in their own individual repositories. Some are written in ES5 JavaScript, and should be pretty easy to add to an exiting project. Other older scripts require jQuery as a dependency. There are even a few that are just straight markup patterns, and any additional functionality would need to be supplied via the underlying language of a particular project (e.g. PHP, Ruby, more JavaScript).  
+These components all live in their own repositories. Some are written in ES5 JavaScript, and should be pretty easy to add to an exiting project. Other older scripts require jQuery as a dependency. There are even a few that are just straight markup patterns, and any additional functionality would need to be supplied via the underlying language of a particular project (e.g. PHP, Ruby, more JavaScript).  
 
 ## Vanilla JavaScripts
 * [ARIA Accordions](https://github.com/scottaohara/accessible_accordions)  
