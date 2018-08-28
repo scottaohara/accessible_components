@@ -7,8 +7,8 @@ These components all live in their own repositories. Some are written in ES5 Jav
 ## Vanilla JavaScripts
 * [ARIA Accordions](https://github.com/scottaohara/accessible_accordions)  
 * [ARIA Disclosure Widgets](https://github.com/scottaohara/aria_disclosure_widget)  
-* [ARIA Switch Button](https://github.com/scottaohara/aria-switch-button)  
 * [ARIA Modal Dialogs (v3)](https://github.com/scottaohara/accessible_modal_window)
+* [ARIA Switch](https://github.com/scottaohara/aria-switch-button)  
 * [ARIA Links](https://github.com/scottaohara/aria-links)  
 * [ARIA Buttons](https://github.com/scottaohara/a11y_button)    
 
