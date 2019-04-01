@@ -13,8 +13,7 @@ These components all live in their own repositories. Some are written in ES5 Jav
 * [ARIA Buttons (v1)](https://github.com/scottaohara/a11y_button)    
 
 ## jQuery Scripts
-* [Tooltips (ARIA 1.0)](https://github.com/scottaohara/a11y_tooltips)  
-* [Keyboard & Screen Reader Friendly, Custom Number Input Component](https://github.com/scottaohara/Numbler)  
+[Tooltips (ARIA 1.0)](https://github.com/scottaohara/a11y_tooltips)  
 
 ## Markup Components  
 * [Breadcrumb Navigation](https://github.com/scottaohara/a11y_breadcrumbs)  
