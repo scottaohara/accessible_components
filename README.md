@@ -8,7 +8,7 @@ These components all live in their own repositories. Some are written in ES5 Jav
 * [ARIA Disclosure Widgets (v0)](https://github.com/scottaohara/aria_disclosure_widget)  
 * [ARIA Modal Dialogs (v3)](https://github.com/scottaohara/accessible_modal_window)
 * [ARIA Tab Widgets (v2)](https://github.com/scottaohara/a11y_tab_widget)
-* [ARIA Switch (v0)](https://github.com/scottaohara/aria-switch-button)  
+* [ARIA Switch (v1)](https://github.com/scottaohara/aria-switch-button)  
 * [ARIA Links (v1)](https://github.com/scottaohara/aria-links)  
 * [ARIA Buttons (v1)](https://github.com/scottaohara/a11y_button)    
 
