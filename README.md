@@ -18,9 +18,9 @@ The following scripts create custom UI comonents and widgets that require the us
 ## Markup Components  
 * [Breadcrumb Navigation](https://github.com/scottaohara/a11y_breadcrumbs)  
 * [Landmarks Demonstration](https://github.com/scottaohara/landmarks_demo)
-* [Various Styled Form Controls](https://github.com/scottaohara/a11y_styled_form_controls) (some with JavaScript)
+* [Various Styled Form Controls](https://github.com/scottaohara/a11y_styled_form_controls) (some use JavaScript)
 
-### More to come...
+## More to come...
 This is an on-going project, so expect to see more scripts (and non-JS markup & CSS patterns) as time permits.  
 
 If you end up using any of these components, [please let me know](https://twitter.com/scottohara)!  
