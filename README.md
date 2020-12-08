@@ -6,7 +6,7 @@ These components all live in their own repositories. Some are written in ES5 Jav
 ## Vanilla JavaScripts
 The following scripts create custom UI components and widgets that require the use of ARIA:  
 * [Accordions (v3)](https://github.com/scottaohara/accessible_accordions)  
-* [Disclosure Widgets (v0)](https://github.com/scottaohara/aria_disclosure_widget)  
+* [Disclosure Widgets (v1)](https://github.com/scottaohara/aria_disclosure_widget)  
 * [Modal Dialogs (v3)](https://github.com/scottaohara/accessible_modal_window)
 * [Tab Widgets (v2)](https://github.com/scottaohara/a11y_tab_widget)
 * [Switch Toggles (v1)](https://github.com/scottaohara/aria-switch-button)  
