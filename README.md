@@ -18,7 +18,7 @@ The following scripts create custom UI components and widgets that require the u
 
 
 ## Markup Components  
-* [Breadcrumb Navigation](https://github.com/scottaohara/a11y_breadcrumbs)  
+* [Breadcrumb Navigation (v1.1)](https://github.com/scottaohara/a11y_breadcrumbs)  
 * [Landmarks Demonstration](https://github.com/scottaohara/landmarks_demo)
 * [Various Styled Form Controls](https://github.com/scottaohara/a11y_styled_form_controls) 
 
