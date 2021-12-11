@@ -10,11 +10,11 @@ The following scripts create custom UI components and widgets that require the u
 * [Disclosure Widgets (v1)](https://github.com/scottaohara/aria_disclosure_widget)  
 * [Modal Dialogs (v3)](https://github.com/scottaohara/accessible_modal_window)
 * [Tab Widgets (v2)](https://github.com/scottaohara/a11y_tab_widget)
-* [Switch Toggles (v2)](https://github.com/scottaohara/aria-switch-button)  
+* [Switch Toggles (v2.0.1)](https://github.com/scottaohara/aria-switch-button)  
 * [Switch Toggle Web Component (v0)](https://github.com/scottaohara/a11y_switch_web_component)
 * [Tooltips (v1)](https://github.com/scottaohara/a11y_tooltips) 
 * [Links (v2)](https://github.com/scottaohara/aria-links)   
-* [Buttons (v1)](https://github.com/scottaohara/a11y_button)    
+* [Buttons (v2)](https://github.com/scottaohara/a11y_button)    
 
 
 ## Markup Components  
