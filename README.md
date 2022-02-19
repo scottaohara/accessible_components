@@ -1,30 +1,25 @@
 # Accessible Components  
-I've built a good handful of accessible markup patterns and widgets at this point. Each is based on testing with users, UX and design needs of past projects, and from following W3C specifications & notes. I do enjoy making these :)  
+I've built a good handful of accessible markup patterns and widgets at this point. Each is based on testing with users, UX and design needs of past projects, and from following W3C specifications & notes. 
 
-These components all live in their own repositories. There are a few components that are just static markup patterns, and any additional functionality would need to be supplied by you.  
+Here's a listing of all the ones I've actually put enough effort into making public with explainers, demos n' such.
 
-
-## Vanilla JavaScripts
-The following scripts create custom UI components and widgets that require the use of ARIA:  
 * [Accordions (v3)](https://github.com/scottaohara/accessible_accordions)  
-* [Disclosure Widgets (v2)](https://github.com/scottaohara/aria_disclosure_widget)  
-* [Modal Dialogs (v3)](https://github.com/scottaohara/accessible_modal_window)
-* [Tab Widgets (v2)](https://github.com/scottaohara/a11y_tab_widget)
-* [Switch Toggles (v2.0.1)](https://github.com/scottaohara/aria-switch-button)  
-* [Switch Toggle Web Component (v0)](https://github.com/scottaohara/a11y_switch_web_component)
-* [Tooltips (v1)](https://github.com/scottaohara/a11y_tooltips) 
-* [Links (v2)](https://github.com/scottaohara/aria-links)   
-* [Buttons (v2)](https://github.com/scottaohara/a11y_button)    
-
-
-## Markup Components  
+* [ARIA Links (v2)](https://github.com/scottaohara/aria-links)   
+* [ARIA Buttons (v2)](https://github.com/scottaohara/a11y_button)   
 * [Breadcrumb Navigation (v1.1)](https://github.com/scottaohara/a11y_breadcrumbs)  
+* [Clear text field buttons (v1)](https://github.com/scottaohara/clear-text-field-button)
+* [Disclosure Widgets (v2)](https://github.com/scottaohara/aria_disclosure_widget)  
 * [Landmarks Demonstration](https://github.com/scottaohara/landmarks_demo)
+* [Modal Dialogs (v3)](https://github.com/scottaohara/accessible_modal_window)
+* [Switch Toggle Web Component (v0)](https://github.com/scottaohara/a11y_switch_web_component)
+* [Switch Toggles (v2.0.1)](https://github.com/scottaohara/aria-switch-button)  
+* [Tab Widgets (v2)](https://github.com/scottaohara/a11y_tab_widget)
+* [Tooltips (v1)](https://github.com/scottaohara/a11y_tooltips) 
 * [Various Styled Form Controls](https://github.com/scottaohara/a11y_styled_form_controls) 
 
 
 ## More may come...
-I'll update these patterns as I see fit.  
+I update these patterns as I see fit, and will list any new ones I create here.
 
 If you end up using any of these components, [please let me know](https://twitter.com/scottohara)!  
 
