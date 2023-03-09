@@ -2,7 +2,7 @@
 
 ## MIT License
 
-Copyright &copy; 2014 - 2022
+Copyright &copy; 2014 - 2023
 
 Built by Scott O'Hara // GitHub: @scottaohara / Twitter: @scottohara  
 and acknowledged contributors.
