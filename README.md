@@ -10,7 +10,7 @@ Here's a listing of all the ones I've actually put enough effort into making pub
 * [Clear text field buttons (v1)](https://github.com/scottaohara/clear-text-field-button)
 * [Disclosure Widgets (v2.0.1)](https://github.com/scottaohara/aria_disclosure_widget)  
 * [Landmarks Demonstration](https://github.com/scottaohara/landmarks_demo)
-* [Modal Dialogs (v3)](https://github.com/scottaohara/accessible_modal_window)
+* [Modal Dialogs (v3 - archived)](https://github.com/scottaohara/accessible_modal_window)
 * [Switch Toggle Web Component (v0)](https://github.com/scottaohara/a11y_switch_web_component)
 * [Switch Toggles (v2.0.1)](https://github.com/scottaohara/aria-switch-button)  
 * [Tab Widgets (v2)](https://github.com/scottaohara/a11y_tab_widget)
